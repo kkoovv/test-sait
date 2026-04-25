@@ -1,0 +1,96 @@
+ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+a {
+    display: flex;
+    height: 50px;
+    line-height: 50px;
+    /* убери background-color: black отсюда! */
+    text-decoration: none;
+    color: white;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+.logo-link {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list li {
+    display: inline-block;
+    padding: 0 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.nav-list li::last-of-type {
+    padding: 0px;
+}
+
+.nav-list-link{
+    position: relative;
+}
+
+.nav-list-link::after {
+    content: "";
+    background: #17baaa;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 13px;
+    left: 0;
+    transform: scaleX(0); 
+    transition: transform .25s ease;
+}
+
+.nav-list-link:hover {
+    color: #17baaa;
+}
+
+.nav-list-link:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-list li:last-of-type a {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 0 10px;
+    background-color: red;
+    border-radius: 3px;
+    transition: all .25s ease;
+}
+
+.heart-icon {
+    margin-right: 5px;
+}
+
+.nav-list li:last-of-type a:hover {
+    background-color: darkred;
+}
+
+.nav-list li:last-of-type a svg {
+    width: 1em;
+}
+
